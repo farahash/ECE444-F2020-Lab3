@@ -1,5 +1,47 @@
 # Farah Ashqar
 
+## Building and starting the system:
+
+### Build the docker image:
+
+The Dockerfile is in the root directory of the repository, so the build command needs to be run in that directory. 
+
+```sh
+cd /path/to/repo
+docker build -t lab4-image-name:latest .
+```
+
+### Run:
+
+After the image is created, run the following command to run the server in a docker container. 
+
+```sh
+docker run -p 5000:5000 lab4-image-name
+```
+To open the webpage, go to localhost:5000 in your browser. 
+
+## Lab 4 screenshots: 
+
+### Screenshot 1 - Docker Image
+
+![Screenshot](Images/docker_image.png)
+
+### Screenshot 2 - Docker Run Command
+
+![Screenshot](Images/docker_run_command.png)
+
+### Screenshot 3 - Browser
+
+![Screenshot](Images/browser.png)
+
+## docker vs. virtual machines
+
+One of the biggest differences between virtual machines and docker containers is that virtual machines are more isolated and run as a separate system, which makes them have more overhead since they run a full-blown operating system (virtualization happens on a hardware level). Docker is more lightweight and shares the kernel with the host machine (and with other containers), which makes it more efficient in terms of system resources.
+
+One advantage of Docker over virtual machines is that they are portable across multiple platforms, allowing them to easily be shared, tested, and run on different platforms without running into compatibility issues. It is also much faster to create and to boot up Docker images/ containers than virtual machines.
+
+An advantage of Virtual machines over docker is that they are more secure, the reason for this being that docker has access to the system's kernel. 
+
 ## This repo is a clone of https://github.com/miguelgrinberg/flasky
 
 ## Activity 1 - Screenshot
